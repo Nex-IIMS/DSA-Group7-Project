@@ -26,6 +26,7 @@ int interpolationSearch(const std::vector<Record>& records, int target) {
         if (records[pos].value == target) return pos;
         else if (records[pos].value < target) low = pos + 1;
         else high = pos - 1;
+        
     }
     return -1;
 }
