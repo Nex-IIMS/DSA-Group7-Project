@@ -52,7 +52,7 @@ void displayRecords(const vector<Record>& records) {
     cout << "         ALL RECORDS (" << records.size() << " total)" << endl;
     printSeparator();
     cout << "| " << setw(6) << "ID"
-         << " | " << setw(10) << "Value" << " |" << endl;
+        << " | " << setw(10) << "Value" << " |" << endl;
     printThinSeparator(24);
 
     for (const auto& record : records) {
@@ -184,7 +184,7 @@ void handleSorting(vector<Record>& records) {
         // Display timing result
         cout << "\n   " << algorithmName << " completed!" << endl;
         cout << "   Execution Time: " << fixed << setprecision(4)
-             << timer.getElapsedMilliseconds() << " ms" << endl;
+            << timer.getElapsedMilliseconds() << " ms" << endl;
         cout << "   Records sorted: " << workingCopy.size() << endl;
 
         // Ask if user wants to view sorted results
@@ -289,15 +289,15 @@ void handleSearching(const vector<Record>& records) {
 
         if (resultIndex != -1) {
             cout << "   FOUND! Value " << target
-                 << " at index " << resultIndex << endl;
+                << " at index " << resultIndex << endl;
             cout << "   Record ID: " << records[resultIndex].id << endl;
         } else {
             cout << "   NOT FOUND. Value " << target
-                 << " does not exist in the dataset." << endl;
+                << " does not exist in the dataset." << endl;
         }
 
         cout << "   Execution Time: " << fixed << setprecision(4)
-             << timer.getElapsedMilliseconds() << " ms" << endl;
+            << timer.getElapsedMilliseconds() << " ms" << endl;
         printThinSeparator(40);
     }
 }
@@ -324,7 +324,7 @@ void handleRegenerate(vector<Record>& records) {
 
     records = generateRecords(newSize);
     cout << "   New dataset generated with " << records.size()
-         << " records." << endl;
+        << " records." << endl;
 }
 
 // ============================================================
@@ -342,7 +342,7 @@ int main() {
     cout << "   Sorting & Searching Algorithm System" << endl;
     printSeparator();
     cout << "   " << DEFAULT_RECORD_COUNT
-         << " records generated successfully." << endl;
+        << " records generated successfully." << endl;
 
     bool running = true;
 
