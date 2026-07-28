@@ -15,20 +15,30 @@
 
 #include "binary_search.h"
 
-// TODO: Implement Binary Search algorithm here
-int binarySearch(const std::vector<Record>& records, int target) {
-    // ----- PLACEHOLDER: Replace with actual implementation -----
-    // Example structure:
-    //
-    // int low = 0, high = records.size() - 1;
-    // while (low <= high) {
-    //     int mid = low + (high - low) / 2;
-    //     if (records[mid].value == target) return mid;
-    //     else if (records[mid].value < target) low = mid + 1;
-    //     else high = mid - 1;
-    // }
-    // return -1;  // Not found
-    // -----------------------------------------------------------
+int binarySearch(const std::vector<Record>& records, int target)
+{
+    int low = 0;
+    int high = records.size() - 1;
 
-    return -1;  // Placeholder return
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2;
+
+        if (records[mid].value == target)
+        {
+            return mid;
+        }
+
+        else if (records[mid].value < target)
+        {
+            low = mid + 1;
+        }
+
+        else
+        {
+            high = mid - 1;
+        }
+    }
+
+    return -1;
 }
