@@ -12,7 +12,6 @@
 //   4. Do NOT modify the function signature in binary_search.h
 //   5. IMPORTANT: Data must be sorted before using this search
 // ============================================================
-
 #include "binary_search.h"
 
 int binarySearch(const std::vector<Record>& records, int target)
@@ -42,3 +41,4 @@ int binarySearch(const std::vector<Record>& records, int target)
 
     return -1;
 }
+
