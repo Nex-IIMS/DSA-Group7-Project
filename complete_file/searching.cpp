@@ -1,4 +1,4 @@
-#include "searching.h"
+#include <vector>
 
 int binarySearch(const std::vector<Record>& records, int target)
 {
@@ -13,17 +13,11 @@ int binarySearch(const std::vector<Record>& records, int target)
         int mid = low + (high - low) / 2;
 
         if (records[mid].value == target)
-        {
             return mid;
-        }
         else if (records[mid].value < target)
-        {
             low = mid + 1;
-        }
         else
-        {
             high = mid - 1;
-        }
     }
 
     return -1;
@@ -45,7 +39,6 @@ int interpolationSearch(const std::vector<Record>& records, int target)
         {
             if (records[low].value == target)
                 return low;
-
             return -1;
         }
 
@@ -57,17 +50,11 @@ int interpolationSearch(const std::vector<Record>& records, int target)
                   );
 
         if (records[pos].value == target)
-        {
             return pos;
-        }
         else if (records[pos].value < target)
-        {
             low = pos + 1;
-        }
         else
-        {
             high = pos - 1;
-        }
     }
 
     return -1;
